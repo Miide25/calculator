@@ -1,0 +1,112 @@
+
+ /* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    background-color: #8bc6ec;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  /* Calculator Display */
+  .calc-text {
+    background: #000000;
+    padding: 2vw; /* Use viewport width units for responsive padding */
+    width: 90%; /* Adjusts width relative to the viewport */
+    max-width: 350px; /* Maximum width to maintain design */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2rem auto; /* Center-align with automatic margins */
+  }
+  
+  /* Calculator Text Styling */
+  .calc-text p {
+    width: 100%;
+    font-size: 2rem; /* Use relative units for responsive text size */
+    text-align: right;
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin: 0;
+    padding-right: 1vw;
+  }
+  
+  /* Button Styling */
+  button {
+    background: #333333;
+    color: #fff;
+    font-size: 1.2rem; /* Adjusted for better responsiveness */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 12vw; /* Use viewport width units for responsive sizing */
+    width: 12vw;
+    max-width: 65px; /* Ensures buttons do not exceed a specific size */
+    max-height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s, filter 0.1s;
+  }
+  
+  /* Button Active and Focus States */
+  button:active,
+  button:focus {
+    filter: brightness(120%);
+    transform: scale(0.95);
+  }
+  
+  /* Calculator Keys Grid Layout */
+  .calc-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2vw; /* Use relative units for grid gap */
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 350px; /* Ensures the calculator doesn't exceed a specific width */
+  }
+  
+  /* Zero Button Styling */
+  .key-zero {
+    grid-column: span 2;
+    border-radius: 30px;
+    width: 100%;
+  }
+  
+  /* Specific Button Colors */
+  .key-operate {
+    background: #ff9501;
+  }
+  
+  .key-others {
+    background: #a6a6a6;
+    color: #000000;
+  }
+  /* For screens smaller than 400px */
+@media only screen and (max-width: 400px) {
+    .calc-text p {
+      font-size: 1.5rem; /* Smaller text for very small screens */
+    }
+  
+    button {
+      font-size: 1rem;
+      height: 10vw;
+      width: 10vw;
+      max-width: 50px;
+      max-height: 50px;
+    }
+  }
+  
+  
